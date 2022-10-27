@@ -1,5 +1,6 @@
 {
     "name": "kanata-php/sdk-util",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Kanata\\Sdk\\": "src/"
