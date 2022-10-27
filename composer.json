@@ -1,0 +1,11 @@
+{
+    "name": "kanata-php/sdk-util",
+    "autoload": {
+        "psr-4": {
+            "Kanata\\Sdk\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}
