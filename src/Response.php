@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanata\Sdk;
+namespace KanataSdk;
 
 use ArrayAccess;
 use JsonSerializable;

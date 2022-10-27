@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanata\Sdk\Services;
+namespace KanataSdk\Services;
 
 use GuzzleHttp\Client;
 

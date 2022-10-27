@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanata\Sdk;
+namespace KanataSdk;
 
 use Exception;
-use Kanata\Sdk\Services\ProxyClient;
+use KanataSdk\Services\ProxyClient;
 
 abstract class Sdk
 {

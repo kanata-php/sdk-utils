@@ -1,11 +1,11 @@
 <?php
 
-namespace Kanata\Sdk;
+namespace KanataSdk;
 
 use Exception;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ConnectException;
-use Kanata\Sdk\Services\ProxyClient;
+use KanataSdk\Services\ProxyClient;
 
 class Request
 {
@@ -165,7 +165,7 @@ class Request
             $result->setFormattedResponse(
                 status: $expectedStatus,
                 success: true,
-                data: $data['data'] ?? null
+                data: $data['data'] ?? $data
             );
             return $result;
         }
@@ -279,7 +279,7 @@ class Request
             $result->setFormattedResponse(
                 status: $expectedStatus,
                 success: true,
-                data: $data['data'] ?? null
+                data: $data['data'] ?? $data
             );
             return $result;
         }
@@ -384,7 +384,7 @@ class Request
         if ($expectedStatus === $response->getStatusCode()) {
             if ('application/json' === $accept) {
                 $data = json_decode($response->getBody()->getContents(), true);
-                $data = $data['data'] ?? null;
+                $data = $data['data'] ?? $data;
             } else {
                 $data = '';
                 $body = $response->getBody();

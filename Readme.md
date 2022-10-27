@@ -6,9 +6,9 @@ This is a helper package to provide tools for SDKs.
 ## Usage
 
 ```php
-use Kanata\Sdk\Sdk;
-use Kanata\Sdk\Request;
-use Kanata\Sdk\Response;
+use KanataSdk\Sdk;
+use KanataSdk\Request;
+use KanataSdk\Response;
 
 class ExampleSdk extends Sdk
 {
