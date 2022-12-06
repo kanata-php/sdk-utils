@@ -30,7 +30,7 @@ class Request
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
-        string $inputDataWrapper = 'data',
+        ?string $inputDataWrapper = 'data',
     ): Response {
         if (null === $procedure) {
             $procedure = $method;
@@ -102,7 +102,7 @@ class Request
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
-        string $inputDataWrapper = 'data',
+        ?string $inputDataWrapper = 'data',
     ): Response {
         $payload = $inputData;
         if (null !== $inputDataWrapper) {

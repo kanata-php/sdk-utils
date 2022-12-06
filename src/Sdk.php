@@ -52,7 +52,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
-        string $inputDataWrapper = 'data',
+        ?string $inputDataWrapper = 'data',
     ): Response {
         return Request::request(
             client: $this->client,
@@ -94,7 +94,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
-        string $inputDataWrapper = 'data',
+        ?string $inputDataWrapper = 'data',
     ): Response {
         return $this->request(
             method: 'PUT',
@@ -115,7 +115,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
-        string $inputDataWrapper = 'data',
+        ?string $inputDataWrapper = 'data',
     ): Response {
         return $this->request(
             method: 'POST',
@@ -136,7 +136,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
-        string $inputDataWrapper = null,
+        ?string $inputDataWrapper = null,
     ): Response {
         return $this->request(
             method: 'DELETE',
