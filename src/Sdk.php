@@ -52,6 +52,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
+        string $inputDataWrapper = 'data',
     ): Response {
         return Request::request(
             client: $this->client,
@@ -63,6 +64,7 @@ abstract class Sdk
             expectedStatus: $expectedStatus,
             contentType: $contentType,
             accept: $accept,
+            inputDataWrapper: $inputDataWrapper,
         );
     }
 
@@ -92,6 +94,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
+        string $inputDataWrapper = 'data',
     ): Response {
         return $this->request(
             method: 'PUT',
@@ -101,6 +104,7 @@ abstract class Sdk
             expectedStatus: $expectedStatus,
             contentType: $contentType,
             accept: $accept,
+            inputDataWrapper: $inputDataWrapper,
         );
     }
 
@@ -111,6 +115,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
+        string $inputDataWrapper = 'data',
     ): Response {
         return $this->request(
             method: 'POST',
@@ -120,6 +125,7 @@ abstract class Sdk
             expectedStatus: $expectedStatus,
             contentType: $contentType,
             accept: $accept,
+            inputDataWrapper: $inputDataWrapper,
         );
     }
 
@@ -130,6 +136,7 @@ abstract class Sdk
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
+        string $inputDataWrapper = null,
     ): Response {
         return $this->request(
             method: 'DELETE',
@@ -139,6 +146,7 @@ abstract class Sdk
             expectedStatus: $expectedStatus,
             contentType: $contentType,
             accept: $accept,
+            inputDataWrapper: $inputDataWrapper,
         );
     }
 }

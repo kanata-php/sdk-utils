@@ -30,6 +30,7 @@ class Request
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
+        string $inputDataWrapper = 'data',
     ): Response {
         if (null === $procedure) {
             $procedure = $method;
@@ -47,6 +48,7 @@ class Request
                     expectedStatus: $expectedStatus,
                     contentType: $contentType,
                     accept: $accept,
+                    inputDataWrapper: $inputDataWrapper,
                 );
 
             case 'PUT':
@@ -59,6 +61,7 @@ class Request
                     expectedStatus: $expectedStatus,
                     contentType: $contentType,
                     accept: $accept,
+                    inputDataWrapper: $inputDataWrapper,
                 );
 
             case 'GET':
@@ -81,6 +84,7 @@ class Request
                     expectedStatus: $expectedStatus,
                     contentType: $contentType,
                     accept: $accept,
+                    inputDataWrapper: $inputDataWrapper,
                 );
 
             default:
@@ -98,8 +102,12 @@ class Request
         int $expectedStatus = 200,
         string $contentType = 'application/json',
         string $accept = 'application/json',
+        string $inputDataWrapper = 'data',
     ): Response {
-        $payload = ['data' => $inputData];
+        $payload = $inputData;
+        if (null !== $inputDataWrapper) {
+            $payload = [$inputDataWrapper => $inputData];
+        }
 
         $result = new Response;
 
